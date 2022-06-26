@@ -23,11 +23,12 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(woff)$/,
-        use: {
-          loader: 'url-loader',
+        test: /\.(woff(2)?|ttf|eot)$/,
+        type: 'asset/resource',
+        generator: {
+            filename: './fonts/[name][ext]',
         },
-      },
+    },
     ],
   },
 };

@@ -1,5 +1,5 @@
 // js goes here :)
-import './main.css'
+// import './main.css'
 import * as PIXI from 'pixi.js'
 import * as UTIL from './usefulFunctions.js'
 

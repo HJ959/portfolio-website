@@ -679,14 +679,14 @@ eval("\n\nmodule.exports = {\n  isString: function(arg) {\n    return typeof(arg
 
 /***/ }),
 
-/***/ "./src/app.js":
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ \"./src/main.css\");\n/* harmony import */ var pixi_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/dist/esm/pixi.js\");\n/* harmony import */ var _usefulFunctions_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./usefulFunctions.js */ \"./src/usefulFunctions.js\");\n// js goes here :)\r\n\r\n\r\n\r\n\r\n// The application will create a renderer using WebGL, if possible,\r\n// with a fallback to a canvas render. It will also setup the ticker\r\n// and the root stage PIXI.Container\r\nconst app = new pixi_js__WEBPACK_IMPORTED_MODULE_1__.Application({\r\n    resizeTo: window\r\n});\r\n\r\n// The application will create a canvas element for you that you\r\n// can then insert into the DOM\r\ndocument.body.appendChild(app.view);\r\n\r\n// load the texture we need\r\napp.loader.add('floaty', 'media/floaty.png').load((loader, resources) => {\r\n    // This creates a texture from a 'floaty.png' image\r\n    const floaty = new pixi_js__WEBPACK_IMPORTED_MODULE_1__.Sprite(resources.floaty.texture);\r\n\r\n    // Setup the position of the floaty\r\n    floaty.x = app.renderer.width / 2;\r\n    floaty.y = app.renderer.height / 2;\r\n\r\n    // Rotate around the center\r\n    floaty.anchor.x = 0.5;\r\n    floaty.anchor.y = 0.5;\r\n\r\n    floaty.pivot.set(window.innerWidth * 0.5, window.innerHeight * 0.5);\r\n\r\n    // randomly place the sprite around the screen on load\r\n    floaty.rotation = _usefulFunctions_js__WEBPACK_IMPORTED_MODULE_2__.getRandomInt(1,360);\r\n\r\n    // Add the floaty to the scene we are building\r\n    app.stage.addChild(floaty);\r\n\r\n    // Listen for frame updates\r\n    app.ticker.add(() => {\r\n         // each frame we spin the floaty around a bit\r\n        floaty.rotation -= 0.001;\r\n    });\r\n});\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ \"./src/main.css\");\n/* harmony import */ var pixi_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/dist/esm/pixi.js\");\n/* harmony import */ var _usefulFunctions_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./usefulFunctions.js */ \"./src/usefulFunctions.js\");\n// js goes here :)\r\n\r\n\r\n\r\n\r\n// The application will create a renderer using WebGL, if possible,\r\n// with a fallback to a canvas render. It will also setup the ticker\r\n// and the root stage PIXI.Container\r\nconst app = new pixi_js__WEBPACK_IMPORTED_MODULE_1__.Application({\r\n    resizeTo: window\r\n});\r\n\r\n// The application will create a canvas element for you that you\r\n// can then insert into the DOM\r\ndocument.body.appendChild(app.view);\r\n\r\n// load the texture we need\r\napp.loader.add('floaty', 'media/floaty.png').load((loader, resources) => {\r\n    // This creates a texture from a 'floaty.png' image\r\n    const floaty = new pixi_js__WEBPACK_IMPORTED_MODULE_1__.Sprite(resources.floaty.texture);\r\n\r\n    // Setup the position of the floaty\r\n    floaty.x = app.renderer.width / 2;\r\n    floaty.y = app.renderer.height / 2;\r\n\r\n    // Rotate around the center\r\n    floaty.anchor.y = 0.5;\r\n    floaty.pivot.set(window.innerWidth * 0.5, window.innerHeight * 0.5);\r\n\r\n    // randomly place the sprite around the screen on load\r\n    floaty.rotation = _usefulFunctions_js__WEBPACK_IMPORTED_MODULE_2__.getRandomInt(1,360);\r\n\r\n    // Add the floaty to the scene we are building\r\n    app.stage.addChild(floaty);\r\n\r\n    // Listen for frame updates\r\n    app.ticker.add(() => {\r\n         // each frame we spin the floaty around a bit\r\n        floaty.rotation -= 0.001;\r\n    });\r\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -862,7 +862,7 @@ eval("module.exports = __webpack_require__.p + \"26f17ddefbcc9a183298.woff\";\n\
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/app.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
 /******/ 	
 /******/ })()
 ;

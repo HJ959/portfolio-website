@@ -24,9 +24,7 @@ app.loader.add('floaty', 'media/floaty.png').load((loader, resources) => {
     floaty.y = app.renderer.height / 2;
 
     // Rotate around the center
-    floaty.anchor.x = 0.5;
     floaty.anchor.y = 0.5;
-
     floaty.pivot.set(window.innerWidth * 0.5, window.innerHeight * 0.5);
 
     // randomly place the sprite around the screen on load

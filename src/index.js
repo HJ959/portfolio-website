@@ -1,41 +1,33 @@
 // js goes here :)
-// import './main.css'
-import * as PIXI from 'pixi.js'
 import * as UTIL from './usefulFunctions.js'
+import './main.css'
 
-// The application will create a renderer using WebGL, if possible,
-// with a fallback to a canvas render. It will also setup the ticker
-// and the root stage PIXI.Container
-const app = new PIXI.Application({
-    resizeTo: window
-});
+// // track mouse clicks
+// let mouseX, mouseY = 0
 
-// The application will create a canvas element for you that you
-// can then insert into the DOM
-document.body.appendChild(app.view);
 
-// load the texture we need
-app.loader.add('floaty', 'media/floaty.png').load((loader, resources) => {
-    // This creates a texture from a 'floaty.png' image
-    const floaty = new PIXI.Sprite(resources.floaty.texture);
+// function logKey(e) {
+//     mouseX = e.clientX - 100
+//     mouseY = e.clientY - 100
+//     if (mouseX < 0) mouseX = 0
+//     if (mouseY < 0) mouseY = 0
+// }
+// window.addEventListener('pointermove', logKey)
 
-    // Setup the position of the floaty
-    floaty.x = app.renderer.width / 2;
-    floaty.y = app.renderer.height / 2;
+// let start, previousTimeStamp
+// const backgroundElement = document.getElementById("mainImage")
+// function step(timestamp) {
+//     if (start === undefined) {
+//         start = timestamp
+//     }
 
-    // Rotate around the center
-    floaty.anchor.y = 0.5;
-    floaty.pivot.set(window.innerWidth * 0.5, window.innerHeight * 0.5);
+//     if (timestamp != previousTimeStamp) {
+//         backgroundElement.style.transform = `translate(${mouseX}px,${mouseY}px)`
+//         console.log(mouseX, mouseY)
+//     }
 
-    // randomly place the sprite around the screen on load
-    floaty.rotation = UTIL.getRandomInt(1,360);
+//     previousTimeStamp = timestamp
+//     window.requestAnimationFrame(step)
+// }
 
-    // Add the floaty to the scene we are building
-    app.stage.addChild(floaty);
-
-    // Listen for frame updates
-    app.ticker.add(() => {
-         // each frame we spin the floaty around a bit
-        floaty.rotation -= 0.001;
-    });
-});
+// window.requestAnimationFrame(step)

@@ -2,7 +2,7 @@
     font-family: 'OpenDyslexic';
     font-style: normal;
     font-weight: normal;
-    src: url('media/OpenDyslexic-Regular.woff') format('woff');
+    src: url('./OpenDyslexic-Regular.woff') format('woff');
 }
 
 * {

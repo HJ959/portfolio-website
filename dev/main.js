@@ -146,7 +146,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"./fonts/OpenDyslexic-Regular.woff\";\n\n//# sourceURL=webpack:///./src/media/OpenDyslexic-Regular.woff?");
+eval("module.exports = __webpack_require__.p + \"./media/OpenDyslexic-Regular.woff\";\n\n//# sourceURL=webpack:///./src/media/OpenDyslexic-Regular.woff?");
 
 /***/ })
 

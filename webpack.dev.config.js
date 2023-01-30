@@ -17,8 +17,7 @@ module.exports = {
     })
   ],
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
@@ -26,9 +25,9 @@ module.exports = {
         test: /\.(woff(2)?|ttf|eot)$/,
         type: 'asset/resource',
         generator: {
-            filename: './[name][ext]',
+          filename: './[name][ext]',
         },
-    },
+      },
     ],
   },
 };
